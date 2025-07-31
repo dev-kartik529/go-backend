@@ -1,14 +1,17 @@
 package main
 
 import (
-    "github.com/gin-gonic/gin"
-    "go-auth-backend/config"
-    "go-auth-backend/routes"
+	"go-auth-backend/config"
+	"go-auth-backend/routes"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-    config.ConnectDB()
-    r := gin.Default()
-    routes.AuthRoutes(r)
-    r.Run(":8080")
+	r := gin.Default()
+	config.ConnectDB()
+	//r := gin.Default()
+	routes.AuthRoutes(r)
+
+	r.Run(":8080")
 }
