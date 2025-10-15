@@ -1,0 +1,14 @@
+# Common ignore files for Go + Flutter projects
+.env
+build/
+.dart_tool/
+.idea/
+.vscode/
+pubspec.lock
+
+# Go build files
+bin/
+*.exe
+*.log
+*.out
+*.test
